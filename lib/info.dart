@@ -54,8 +54,17 @@ class Info extends StatelessWidget {
                   ]
               ),
             ],
-          )
-        ],),),
+          ),
+          bmi == '' ?
+              Text('Please enter your weight and height.') :
+              Text('Your BMI is : $bmi'),
+          Expanded(child: SizedBox()),
+          ElevatedButton(onPressed: (){
+            Navigator.pop(context);
+          }, child: Text('Back'))
+        ],
+        ),
+        ),
       ),
     );
   }
